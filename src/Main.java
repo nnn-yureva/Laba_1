@@ -1,6 +1,10 @@
 import container.ListElem;
 public class Main {
 
+    /**
+     * вывод о состоянии выполнения операций
+     * @param t true Или false
+     */
     public static void printRes(boolean t)
     {
         if(t)System.out.println("Операция прошла успешно.");
