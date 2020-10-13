@@ -1,8 +1,9 @@
 package container;
 
 public class Elem {
-
+    /** Свойство - ссылка на след элемент */
     private Elem next = null;
+    /** Свойство - значение элемента */
     private int num;
 
     /**

@@ -3,7 +3,9 @@ package container;
 import container.Elem;
 
 public class ListElem extends Elem {
+    /** Свойство - голова списка */
     private Elem head = null;
+    /** Свойство - размер списка */
     private static int size = 0;
 
     /**
