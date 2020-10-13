@@ -3,7 +3,7 @@ public class Main {
 
     /**
      * вывод о состоянии выполнения операций
-     * @param t true Или false
+     * @param t true или false
      */
     public static void printRes(boolean t)
     {
