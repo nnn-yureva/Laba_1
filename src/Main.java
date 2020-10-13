@@ -1,5 +1,6 @@
+import container.ListElem;
 public class Main {
-    
+
     public static void printRes(boolean t)
     {
         if(t)System.out.println("Операция прошла успешно.");
@@ -35,6 +36,7 @@ public class Main {
         lst.printListElem();
         System.out.println(lst.getSize());
 
+
         System.out.println("\nПример извлечения:\n");
         lst.getElem(1);
         lst.getElem(3);
@@ -51,8 +53,6 @@ public class Main {
         t = lst.delElem(lst.getSize());//удаление последнего элем.
         printRes(t);
         lst.printListElem();
-
-
 
     }
 }

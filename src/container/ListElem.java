@@ -1,8 +1,15 @@
-public class ListElem {
+package container;
+
+import container.Elem;
+
+public class ListElem extends Elem {
     private Elem head = null;
     private static int size = 0;
 
-    //добавление в список самого первого элемента
+    /**
+     * добавление первого элемента
+     * @param obj значение нового элемента
+     */
     private void addFirst(int obj) {
         Elem node = new Elem();
         node.setNum(obj);
@@ -11,7 +18,10 @@ public class ListElem {
         size++;
     }
 
-    //добавление элемента в конец списка
+    /**
+     * добавление элемента в конец списка
+     * @param obj значение нового элемента
+     */
     private void addEnd(int obj) {
         Elem node1 = new Elem();//основной
         node1.setNum(obj);
@@ -22,7 +32,9 @@ public class ListElem {
         node2 = null;
     }
 
-    //удаление первого элемента
+    /**
+     * удаление первого элемента
+     */
     private void delFirst() {
         Elem node = new Elem();
         node = head;
@@ -32,17 +44,27 @@ public class ListElem {
         if(size == 0) head = null;
     }
 
-    //получить размер списка
+    /**
+     *
+     * @return размер текущего списка
+     */
     public int getSize() {
         return size;
     }
 
-    //проверка пустой список или нет
+    /**
+     * проверка пустой список или нет
+     * @return true если пустой, иначе false
+     */
     public boolean isEmpty() {
         return (head == null);
     }
 
-    // поиск позиции, возвращает элемент, после которого следует искомая позиция
+    /**
+     * поиск позиции
+     * @param num искомая позиция
+     * @return элемент, после которого следует искомая позиция
+     */
     private Elem positionSearch(int num) {
         Elem obj = new Elem();
         obj = head;//становимся в начало списка и пошли искать элемент который будет стоять перед num-1 (учит-ся нумерац. с нуля)
@@ -52,7 +74,9 @@ public class ListElem {
         return obj;
     }
 
-    //вывод списка на консоль
+    /**
+     * вывод списка в консоль
+     */
     public void printListElem() {
         Elem node = new Elem();
         node = head;
@@ -68,10 +92,12 @@ public class ListElem {
         node = null;
     }
 
-    //добавление элемента в список
-    // параметры: что вставляем и куда
-    // возвращает true если вставка прошла успешно, иначе false
-    // если позиция не указана(добавление происходит в конец списка)
+    /**
+     * добавление элемента в список
+     * позиция не указана(добавление происходит в конец списка)
+     * @param obj что вставляем
+     * @return true если вставка прошла успешно, иначе false
+     */
     public boolean addElem(int obj) {
         Elem node1 = new Elem();//основной
         Elem node2 = new Elem();//вспомогательный
@@ -81,9 +107,13 @@ public class ListElem {
         return true;
     }
 
-    // если позиция указана
-    // параметры: что вставляем и куда
-    // возвращает true если вставка прошла успешно, иначе false
+    /**
+     * добавление элемента в список
+     * позиция указана
+     * @param obj что вставляем
+     * @param n куда(позиция)
+     * @return true если вставка прошла успешно, иначе false
+     */
     public boolean addElem(int obj, int n) {
         Elem node1 = new Elem();//основной
         Elem node2 = new Elem();//вспомогательный
@@ -105,11 +135,13 @@ public class ListElem {
         } else return false;
     }
 
-    //извлечение элемента(поиск)
-    //параметр: позиция искомого элемента
+    /**
+     * извлечение элемента(поиск)
+     * @param n позиция искомого элемента
+     * @return ссылка на иском. элем.
+     */
     public Elem getElem(int n)
     {
-
         if (n < 1 || n > size) {
             System.out.println("Выход за границы списка.");
             return null;
@@ -127,8 +159,11 @@ public class ListElem {
         }
     }
 
-    //удаление элемента из любой позиции
-    //параметр: номер элемента, кот. нужно удалить
+    /**
+     * удаление элемента из любой позиции
+     * @param n номер элемента, кот. нужно удалить
+     * @return true если удаление прошло успешно, иначе false
+     */
     public boolean delElem(int n) {
         Elem node1 = new Elem();
         Elem node2 = new Elem();
